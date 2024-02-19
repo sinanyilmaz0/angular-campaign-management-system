@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Features
 
-**User authentication with a login screen.
+- User authentication with a login screen.
 - Sidebar for navigation.
 - Campaign creation with a form including title, description, and default values for points and date.
 - Campaign listing with dynamic point increment and decrement, and options for updating and deleting campaigns.
