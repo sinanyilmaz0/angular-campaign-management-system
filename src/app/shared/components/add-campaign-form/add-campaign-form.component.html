@@ -1,0 +1,57 @@
+<form [formGroup]="campaignForm" (ngSubmit)="onSubmit()" [ngClass]="updateCampaing ? 'm-5' : ''">
+  <ng-container *ngIf="updateCampaing"><h2 class="mb-3">Update Campaign</h2></ng-container>
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      formControlName="title"
+      required
+      maxlength="20"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea
+      class="form-control"
+      id="description"
+      formControlName="description"
+      required
+      maxlength="50"
+    ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="points" class="form-label">Points</label>
+    <input
+      type="number"
+      class="form-control"
+      id="points"
+      formControlName="points"
+      (input)="limitInput()"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input
+      type="date"
+      class="form-control"
+      id="date"
+      formControlName="date"
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary float-end mb-4"
+    [disabled]="isDisabled"
+  >
+    Save
+  </button>
+</form>

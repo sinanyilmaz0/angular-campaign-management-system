@@ -1,0 +1,33 @@
+<!-- login.component.html -->
+<section class="vh-100 gradient-custom">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-white text-white" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <img src="../../../assets/images/moneytolia.png" alt="logo" width="300px">
+              <p class="text-black-50 mb-5">
+                Please enter your login and password!
+              </p>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label text-black" for="email">Email</label>
+                <input class="form-control form-control-lg" id="email" [(ngModel)]="email" name="email">
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <label class="form-label text-black" for="password">Password</label>
+                <input class="form-control form-control-lg" id="password" [(ngModel)]="password" name="password" type="password">
+              </div>
+
+              <button class="btn btn-outline-primary btn-lg w-100" type="submit" (click)="login()">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
